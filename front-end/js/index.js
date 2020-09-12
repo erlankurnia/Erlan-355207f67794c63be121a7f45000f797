@@ -6,6 +6,6 @@ setInterval(
     });
   }, 1000);
 
-// $('#hello-btn').on('click', function() {
-//   window.location.assign("login.html");
-// });
+$('#hello-btn').on('click', function() {
+  window.location.assign("login.html");
+});
