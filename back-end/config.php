@@ -38,15 +38,18 @@ class Config
       echo '<br>';
       die('Pembuatan table, gagal: ' . mysqli_error($this->connection));
     }
-    
-    mysqli_close($this->connection);
   }
   
   public function Login($username, $password) : bool
   {
     $query = "SELECT * FROM users WHERE username=`$username` AND password=`$password`";
     return mysqli_query($this->connection, $query);
-  } 
+  }
+
+  public function CloseConnection()
+  {
+    mysqli_close($this->connection);
+  }
 
 }
 

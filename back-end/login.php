@@ -4,6 +4,8 @@ require_once 'config.php';
 
 $config = new Config();
 
+var_dump($_POST);
+
 if(isset($_POST['username']))
 {
   if(isset($_POST['password']))
@@ -26,5 +28,7 @@ else
 {
   echo 'Username tidak ditemukan';
 }
+
+$config->CloseConnection();
 
 ?>
